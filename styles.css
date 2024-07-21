@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 160px;
+}
+
+.header_block {
+    display: flex;
+    width: 90px;
+    height: 100%;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-200, #E2E8F0);
+    background: var(--gray-100, #F1F5F9);
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.10);
+}
+
+.header_block-title {
+    color: var(--gray-800, #1E293B);
+    font-family: "Zilla Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.main_block {
+    display: flex;
+    width: 305px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.main_block-timer {
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--gray-200, #E2E8F0);
+    background: var(--gray-100, #F1F5F9);
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.10);
+}
+
+.main_block-timer-title {
+    color: var(--gray-800, #1E293B);
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.primary_button {
+    display: flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid var(--success-500, #10B981);
+    background: var(--success-500, #10B981);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+    color: var(--white-white, #FFF);
+    font-family: "Zilla Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.add_note-block {
+    display: flex;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px dashed var(--gray-200, #E2E8F0);
+    background: var(--gray-50, #F8FAFC);
+}
+
+.add_note-block-title {
+    color: var(--gray-600, #475569);
+    font-family: "Zilla Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
