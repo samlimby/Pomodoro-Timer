@@ -1,27 +1,32 @@
-const pomoInterval = setInterval(startTimer,1000);
+let pomoInterval;
 let timeSecond = 0;
-let timeMinute = timeSecond * 60;
+let timeMinute = 0;
 
 function startTimer() {
+    pomoInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
     timeSecond++; 
     if (timeSecond > 59) {
         timeSecond = 0;
         timeMinute++;
     }
-    const timerCount = timeMinute + ":" + timeSecond;
+    const timerCount = `${String(timeMinute).padStart(2, '0')}:${String(timeSecond).padStart(2, '0')}`;
+    document.getElementById("timer-count").innerText = timerCount;
+
     if (timeMinute === 25) {
         alert("Time is up!");
-        return stopTimer();
+        stopTimer();
     }
-    return document.getElementById("timer-count").innerText = timerCount;
-}; 
+}
 
 function stopTimer() {
+    clearInterval(pomoInterval);
     timeSecond = 0;
     timeMinute = 0;
-    clearInterval(pomoInterval);
-    return document.getElementById("timer-count").innerText = "00:00";
-};
+    document.getElementById("timer-count").innerText = "00:00";
+}
 
 
 
