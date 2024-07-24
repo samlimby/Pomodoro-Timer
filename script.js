@@ -2,9 +2,13 @@ let pomoInterval;
 let timeSecond = 0;
 let timeMinute = 0;
 const originalTitle = document.title;
+const primaryButton = document.getElementById("start");
 
 function startTimer() {
     pomoInterval = setInterval(updateTimer, 1000);
+    primaryButton.className = "reset_button";
+    primaryButton.innerText = "Reset";
+    primaryButton.onclick = stopTimer;
 }
 
 function updateTimer() {
@@ -29,6 +33,9 @@ function stopTimer() {
     timeMinute = 0;
     document.getElementById("timer-count").innerText = "00:00";
     document.title = originalTitle; 
+    primaryButton.className = "primary_button";
+    primaryButton.innerText = "Start";
+    primaryButton.onclick = startTimer;
 }
 
 
