@@ -3,6 +3,9 @@ let timeSecond = 0;
 let timeMinute = 0;
 const originalTitle = document.title;
 const primaryButton = document.getElementById("start");
+const manualNoteToggle = document.getElementById("manual_note-toggle");
+const notionNoteToggle = document.getElementById("notion_note-toggle");
+const confluenceNoteToggle = document.getElementById("confluence_note-toggle");
 
 function startTimer() {
     pomoInterval = setInterval(updateTimer, 1000);
@@ -36,6 +39,36 @@ function stopTimer() {
     primaryButton.className = "primary_button";
     primaryButton.innerText = "Start";
     primaryButton.onclick = startTimer;
+}
+
+function manualNoteActive() {
+    manualNoteToggle.className = "notes-toggle-button-active";
+    manualNoteToggle.onclick = manualNoteDefault;
+}
+
+function manualNoteDefault() {
+    manualNoteToggle.className = "notes-toggle-button";
+    manualNoteToggle.onclick = manualNoteActive;
+}
+
+function notionNoteActive() {
+    notionNoteToggle.className = "notes-toggle-button-active";
+    notionNoteToggle.onclick = notionNoteDefault;
+}
+
+function notionNoteDefault() {
+    notionNoteToggle.className = "notes-toggle-button";
+    notionNoteToggle.onclick = notionNoteActive;
+}
+
+function confluenceNoteActive() {
+    confluenceNoteToggle.className = "notes-toggle-button-active";
+    confluenceNoteToggle.onclick = confluenceNoteDefault;
+}
+
+function confluenceNoteDefault() {
+    confluenceNoteToggle.className = "notes-toggle-button";
+    confluenceNoteToggle.onclick = confluenceNoteActive;
 }
 
 

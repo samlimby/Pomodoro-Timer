@@ -19,9 +19,19 @@
             <div class="main_block-timer">
                 <h2 id="timer-count" class="main_block-timer-title">00:00</h2>
             </div>
-            <button id="start" onclick="startTimer()" class="primary_button">Start</button>
-            <div class="add_note-block">
-                <h2 class="add_note-block-title">+ Add Task</h2>
+            <div class="action-block">
+                <div class="notes_selection-row">
+                    <h3 class="notes_selection-title">Note Type:</h3>
+                    <div class="notes-toggle">
+                        <img src="assets/images/note-icon.png" id="manual_note-toggle" onclick="manualNoteActive()" class="notes-toggle-button">
+                        <img src="assets/images/notion-icon.png" id="notion_note-toggle" onclick="notionNoteActive()" class="notes-toggle-button">
+                        <img src="assets/images/confluence-icon.png" id="confluence_note-toggle" onclick="confluenceNoteActive()" class="notes-toggle-button">
+                    </div>
+                </div>
+                <button id="start" onclick="startTimer()" class="primary_button">Start</button>
+                <div class="add_note-block">
+                    <h2 class="add_note-block-title">+ Add Task</h2>
+                </div>
             </div>
         </div>
     </div>
